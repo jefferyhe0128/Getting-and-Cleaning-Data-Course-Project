@@ -1,6 +1,6 @@
 # CodeBook
 
-This code book summarizes the resulting data fields in `tidy.txt`.
+This code book describes the variables, the data, and any transformations or work that we performed to clean up the raw UCI HAR Dataset, and the cleaned UCI HAR Dataset called `tidy_dataset.txt`.
 
 ## Identifiers
 
