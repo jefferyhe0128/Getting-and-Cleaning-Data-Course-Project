@@ -1,3 +1,5 @@
+# Getting and Cleaning Data Course Project
+
 library(reshape2)
 
 filename <- "getdata-projectfiles-UCI HAR Dataset.zip"
@@ -19,10 +21,10 @@ features[,2] <- as.character(features[,2])
 
 # Extract only the data on mean and standard deviation
 features_cleaned <- grep(".*mean.*|.*std.*", features[,2])
-features_cleaned.names <- features[features_cleaned,2]
-features_cleaned.names <- gsub('-mean', '_Mean', features_cleaned.names)
-features_cleaned.names <- gsub('-std', '_Std', features_cleaned.names)
-features_cleaned.names <- gsub('[-()]', '', features_cleaned.names)
+features_cleaned_names <- features[features_cleaned,2]
+features_cleaned_names <- gsub('-mean', '_Mean', features_cleaned_names)
+features_cleaned_names <- gsub('-std', '_Std', features_cleaned_names)
+features_cleaned_names <- gsub('[-()]', '', features_cleaned_names)
 
 # Load the train data set
 train <- read.table("UCI HAR Dataset/train/X_train.txt")[features_cleaned]
@@ -38,7 +40,7 @@ test <- cbind(testSubjects, testActivities, test)
 
 # merge two datasets and add labels
 dataset_cleaned <- rbind(train, test)
-colnames(dataset_cleaned) <- c("subject", "activity", features_cleaned.names)
+colnames(dataset_cleaned) <- c("subject", "activity", features_cleaned_names)
 
 # turn activities and subjects into factors
 dataset_cleaned$activity <- factor(dataset_cleaned$activity, levels = activityLabels[,1], labels = activityLabels[,2])
