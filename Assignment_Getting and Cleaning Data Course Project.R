@@ -20,8 +20,8 @@ features[,2] <- as.character(features[,2])
 # Extract only the data on mean and standard deviation
 features_cleaned <- grep(".*mean.*|.*std.*", features[,2])
 features_cleaned.names <- features[features_cleaned,2]
-features_cleaned.names = gsub('-mean', '_Mean', features_cleaned.names)
-features_cleaned.names = gsub('-std', '_Std', features_cleaned.names)
+features_cleaned.names <- gsub('-mean', '_Mean', features_cleaned.names)
+features_cleaned.names <- gsub('-std', '_Std', features_cleaned.names)
 features_cleaned.names <- gsub('[-()]', '', features_cleaned.names)
 
 # Load the train data set
