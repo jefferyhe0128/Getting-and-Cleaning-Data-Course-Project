@@ -5,17 +5,7 @@ This code book describes the variables, the data, and any transformations or wor
 ## Identifiers
 
 * `activity`: the activity each person performed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
-* `subject`: the subject who performed the activity for each window sample, whose range is from 1 to 30. 
- 
-## Activity Labels
-
-* `WALKING` (value `1`): subject was walking during the test
-* `WALKING_UPSTAIRS` (value `2`): subject was walking up a staircase during the test
-* `WALKING_DOWNSTAIRS` (value `3`): subject was walking down a staircase during the test
-* `SITTING` (value `4`): subject was sitting during the test
-* `STANDING` (value `5`): subject was standing during the test
-* `LAYING` (value `6`): subject was laying down during the test
-
+* `subject`: the subject who performed the activity for each window sample and its range is from 1 to 30. 
 
 ## Features
 
@@ -99,11 +89,3 @@ This code book describes the variables, the data, and any transformations or wor
 * `fBodyBodyGyroJerkMag_Std`
 * `fBodyBodyGyroJerkMag_MeanFreq`
 
-## Activity Labels
-
-* `WALKING` (value `1`): subject was walking during the test
-* `WALKING_UPSTAIRS` (value `2`): subject was walking up a staircase during the test
-* `WALKING_DOWNSTAIRS` (value `3`): subject was walking down a staircase during the test
-* `SITTING` (value `4`): subject was sitting during the test
-* `STANDING` (value `5`): subject was standing during the test
-* `LAYING` (value `6`): subject was laying down during the test
