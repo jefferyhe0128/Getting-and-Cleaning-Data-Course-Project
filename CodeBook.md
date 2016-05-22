@@ -4,90 +4,100 @@ This code book describes the variables, the data, and any transformations or wor
 
 ## Identifiers
 
-* `subject` - The ID of the test subject
-* `activity` - The type of activity performed when the corresponding measurements were taken
+* `activity`: the activity each person performed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+* `subject`: the subject who performed the activity for each window sample, whose range is from 1 to 30. 
+ 
+## Activity Labels
 
-## Measurements
+* `WALKING` (value `1`): subject was walking during the test
+* `WALKING_UPSTAIRS` (value `2`): subject was walking up a staircase during the test
+* `WALKING_DOWNSTAIRS` (value `3`): subject was walking down a staircase during the test
+* `SITTING` (value `4`): subject was sitting during the test
+* `STANDING` (value `5`): subject was standing during the test
+* `LAYING` (value `6`): subject was laying down during the test
 
-* `tBodyAccMeanX`
-* `tBodyAccMeanY`
-* `tBodyAccMeanZ`
-* `tBodyAccStdX`
-* `tBodyAccStdY`
-* `tBodyAccStdZ`
-* `tGravityAccMeanX`
-* `tGravityAccMeanY`
-* `tGravityAccMeanZ`
-* `tGravityAccStdX`
-* `tGravityAccStdY`
-* `tGravityAccStdZ`
-* `tBodyAccJerkMeanX`
-* `tBodyAccJerkMeanY`
-* `tBodyAccJerkMeanZ`
-* `tBodyAccJerkStdX`
-* `tBodyAccJerkStdY`
-* `tBodyAccJerkStdZ`
-* `tBodyGyroMeanX`
-* `tBodyGyroMeanY`
-* `tBodyGyroMeanZ`
-* `tBodyGyroStdX`
-* `tBodyGyroStdY`
-* `tBodyGyroStdZ`
-* `tBodyGyroJerkMeanX`
-* `tBodyGyroJerkMeanY`
-* `tBodyGyroJerkMeanZ`
-* `tBodyGyroJerkStdX`
-* `tBodyGyroJerkStdY`
-* `tBodyGyroJerkStdZ`
-* `tBodyAccMagMean`
-* `tBodyAccMagStd`
-* `tGravityAccMagMean`
-* `tGravityAccMagStd`
-* `tBodyAccJerkMagMean`
-* `tBodyAccJerkMagStd`
-* `tBodyGyroMagMean`
-* `tBodyGyroMagStd`
-* `tBodyGyroJerkMagMean`
-* `tBodyGyroJerkMagStd`
-* `fBodyAccMeanX`
-* `fBodyAccMeanY`
-* `fBodyAccMeanZ`
-* `fBodyAccStdX`
-* `fBodyAccStdY`
-* `fBodyAccStdZ`
-* `fBodyAccMeanFreqX`
-* `fBodyAccMeanFreqY`
-* `fBodyAccMeanFreqZ`
-* `fBodyAccJerkMeanX`
-* `fBodyAccJerkMeanY`
-* `fBodyAccJerkMeanZ`
-* `fBodyAccJerkStdX`
-* `fBodyAccJerkStdY`
-* `fBodyAccJerkStdZ`
-* `fBodyAccJerkMeanFreqX`
-* `fBodyAccJerkMeanFreqY`
-* `fBodyAccJerkMeanFreqZ`
-* `fBodyGyroMeanX`
-* `fBodyGyroMeanY`
-* `fBodyGyroMeanZ`
-* `fBodyGyroStdX`
-* `fBodyGyroStdY`
-* `fBodyGyroStdZ`
-* `fBodyGyroMeanFreqX`
-* `fBodyGyroMeanFreqY`
-* `fBodyGyroMeanFreqZ`
-* `fBodyAccMagMean`
-* `fBodyAccMagStd`
-* `fBodyAccMagMeanFreq`
-* `fBodyBodyAccJerkMagMean`
-* `fBodyBodyAccJerkMagStd`
-* `fBodyBodyAccJerkMagMeanFreq`
-* `fBodyBodyGyroMagMean`
-* `fBodyBodyGyroMagStd`
-* `fBodyBodyGyroMagMeanFreq`
-* `fBodyBodyGyroJerkMagMean`
-* `fBodyBodyGyroJerkMagStd`
-* `fBodyBodyGyroJerkMagMeanFreq`
+
+## Features
+
+* `tBodyAcc_MeanX`
+* `tBodyAcc_MeanY`
+* `tBodyAcc_MeanZ`
+* `tBodyAcc_StdX`
+* `tBodyAcc_StdY`
+* `tBodyAcc_StdZ`
+* `tGravityAcc_MeanX`
+* `tGravityAcc_MeanY`
+* `tGravityAcc_MeanZ`
+* `tGravityAcc_StdX`
+* `tGravityAcc_StdY`
+* `tGravityAcc_StdZ`
+* `tBodyAccJerk_MeanX`
+* `tBodyAccJerk_MeanY`
+* `tBodyAccJerk_MeanZ`
+* `tBodyAccJerk_StdX`
+* `tBodyAccJerk_StdY`
+* `tBodyAccJerk_StdZ`
+* `tBodyGyro_MeanX`
+* `tBodyGyro_MeanY`
+* `tBodyGyro_MeanZ`
+* `tBodyGyro_StdX`
+* `tBodyGyro_StdY`
+* `tBodyGyro_StdZ`
+* `tBodyGyroJerk_MeanX`
+* `tBodyGyroJerk_MeanY`
+* `tBodyGyroJerk_MeanZ`
+* `tBodyGyroJerk_StdX`
+* `tBodyGyroJerk_StdY`
+* `tBodyGyroJerk_StdZ`
+* `tBodyAccMag_Mean`
+* `tBodyAccMag_Std`
+* `tGravityAccMag_Mean`
+* `tGravityAccMag_Std`
+* `tBodyAccJerkMag_Mean`
+* `tBodyAccJerkMag_Std`
+* `tBodyGyroMag_Mean`
+* `tBodyGyroMag_Std`
+* `tBodyGyroJerkMag_Mean`
+* `tBodyGyroJerkMag_Std`
+* `fBodyAcc_MeanX`
+* `fBodyAcc_MeanY`
+* `fBodyAcc_MeanZ`
+* `fBodyAcc_StdX`
+* `fBodyAcc_StdY`
+* `fBodyAcc_StdZ`
+* `fBodyAcc_MeanFreqX`
+* `fBodyAcc_MeanFreqY`
+* `fBodyAcc_MeanFreqZ`
+* `fBodyAccJerk_MeanX`
+* `fBodyAccJerk_MeanY`
+* `fBodyAccJerk_MeanZ`
+* `fBodyAccJerk_StdX`
+* `fBodyAccJerk_StdY`
+* `fBodyAccJerk_StdZ`
+* `fBodyAccJerk_MeanFreqX`
+* `fBodyAccJerk_MeanFreqY`
+* `fBodyAccJerk_MeanFreqZ`
+* `fBodyGyro_MeanX`
+* `fBodyGyro_MeanY`
+* `fBodyGyro_MeanZ`
+* `fBodyGyro_StdX`
+* `fBodyGyro_StdY`
+* `fBodyGyro_StdZ`
+* `fBodyGyro_MeanFreqX`
+* `fBodyGyro_MeanFreqY`
+* `fBodyGyro_MeanFreqZ`
+* `fBodyAccMag_Mean`
+* `fBodyAccMag_Std`
+* `fBodyAccMag_MeanFreq`
+* `fBodyBodyAccJerkMag_Mean`
+* `fBodyBodyAccJerkMag_Std`
+* `fBodyBodyAccJerkMag_MeanFreq`
+* `fBodyBodyGyroMag_Mean`
+* `fBodyBodyGyroMag_Std`
+* `fBodyBodyGyroMag_MeanFreq`
+* `fBodyBodyGyroJerkMag_Mean`
+* `fBodyBodyGyroJerkMag_Std`
+* `fBodyBodyGyroJerkMag_MeanFreq`
 
 ## Activity Labels
 
